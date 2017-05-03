@@ -1,0 +1,74 @@
+
+$black: #231F20;
+$blue: #1A66A0;
+$font2: 'Teko', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font1: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+@each $h in -40,5,10,15,25,20,30,35,40,45,50,55,60,70,75,90,95 {
+  .mt#{$h} {
+    margin-top: #{$h}px;
+  }
+}
+
+#datepicker {
+
+	
+	table.ui-datepicker-calendar tbody td.highlight > a {
+		 background: red;
+		 color: #363636;
+		 border: 1px solid #FFDE2E;
+	}
+
+	.ui-datepicker {
+		width:100%;
+		background:#4D4D4D;
+		border:0;
+	}
+	
+
+} //#datepicker
+
+.date-title {
+	background:yellow;
+
+	h2 {
+		color:$black;
+		text-align: center;
+		font: 600 41px $font2;
+	}
+
+	.cal {
+		opacity: .75;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+}
+
+
+
+
+.top-bar,
+.top-bar a {
+	color: $blue;
+}
+
+
+.off-canvas-wrapper {
+  min-height: calc(100vh - 50px);
+}
+.off-canvas {
+  bottom: 0;
+}
+
+h1 {
+	font: 600 61px $font2;
+
+	span {
+		font: 300 16px $font1;
+		color:$blue;
+	}
+}
+
