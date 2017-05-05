@@ -18,14 +18,18 @@ var events = [
 	  $( "#datepicker" ).slideToggle( "slow");
 	 });
 
+    $('.hidden').fadeIn(1000).removeClass('hidden');
+
 
 	$("#datepicker .ui-datepicker-inline").removeAttr("style");
 
    $( "#datepicker" ).datepicker({
-		defaultDate: $.datepicker.parseDate("d m y", "12 4 17"),
+		defaultDate: $.datepicker.parseDate("d m y", "13 4 17"),
 		numberOfMonths: 3,
 
 	 	beforeShowDay: function(date) {
+
+
         var result = [true, '', null];
         var matching = $.grep(events, function(event) {
             return event.Date.valueOf() === date.valueOf();

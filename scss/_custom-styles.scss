@@ -10,13 +10,33 @@ $font1: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
   }
 }
 
+.hidden {
+	display:none;
+}
+
 #datepicker {
 
+	.ui-state-default:hover {
+		background: transparent;
+		cursor:default;
+		color: #B3B3B3;
+	}
 	
 	table.ui-datepicker-calendar tbody td.highlight > a {
-		 background: red;
-		 color: #363636;
-		 border: 1px solid #FFDE2E;
+		 background: #333333;
+		 cursor:pointer;
+	}
+
+	.ui-datepicker-current-day a.ui-state-active,
+	 table.ui-datepicker-calendar tbody td.highlight > a:hover {
+		background:yellow !important;
+		color: $black;
+		border:1px solid #636363;
+	 }
+
+	.ui-datepicker-today	a.ui-state-highlight {
+		background: transparent;
+		color: yellow;
 	}
 
 	.ui-datepicker {
@@ -71,13 +91,74 @@ $font1: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 	
 } // .date-title
 
+.athlete-toggle {
+	color: #76A4C4;
+	font-size: 15px;
+	font-weight: 900;
+	margin:10px 0 0 10px;
+}
+
+.hero {
+	margin:30px 0;
+}
 
 
+ul.athletes {
+	li {
+		padding: 10px; 
+
+		&.current {
+			background:#231F20;
+	
+			a {
+				color: yellow;
+			}
+		}
+	}
+	
+	a {
+		color:#808080;
+
+		&:hover {
+			color: yellow;
+		}
+
+	}
+} //ul.athletes 
 
 .top-bar,
 .top-bar a {
 	color: $blue;
 }
+
+.top-bar {
+	-webkit-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.3);
+	box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.3);
+
+
+	h2 {
+		display: inline;
+		font-size: 22px;
+		margin-right: 60px;
+	}
+	
+	.login {
+		background-image:url('../images/icon-user-2x.png'), url('../images/icon-arrow-down-2x.png');
+		background-repeat:no-repeat, no-repeat;
+		background-position:0 10px, right 17px;
+		background-size: 14px 14px, 8px 6px;
+		padding: 10px 15px 0 22px;
+		margin-right: 10px;
+		font-size: 12px;
+		cursor:pointer;
+
+		&:hover {
+			color:#76A4C4;
+		}
+	}
+
+} // .top-bar
 
 
 .off-canvas-wrapper {
@@ -91,7 +172,7 @@ h1 {
 	font: 600 61px $font2;
 
 	span {
-		font: 300 16px $font1;
+		font: 600 16px $font1;
 		color:$blue;
 	}
 }

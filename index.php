@@ -25,10 +25,14 @@
 						<span>
 						</span>
 				  </a>
-				 Coach Dashboard 1.0
+				 <h2>Coach Dashboard 1.0</h2>
+				 <img src="images/logos-2x.png" width='243' alt="Logos">
+					
+
 			 </section>
 		  </div>
 		  <div class="top-bar-right">
+		  		<div class="login">John Doe</div>
 		  </div>
 		</div>
 
@@ -41,14 +45,15 @@
 
     <div class="off-canvas-wrapper">
       <div class="off-canvas-absolute  off-canvas-wrapper-inner position-left reveal-for-large" id="offCanvasLeftSPlit1" data-off-canvas>
+			<h5 class="athlete-toggle">ATHLETES</h5>
         <ul class="athletes no-bullet">
-        	<li><a class="athlete1" href="">Hannah Fields</a></li>
+        	<li <?php if ($_GET['athlete'] != 7 ) { ?>class='current' <?php } ?>><a class="athlete1" href="/?athlete=1">Hannah Fields</a></li>
+        	<li <?php if ($_GET['athlete'] == 7 ) { ?>class='current' <?php } ?>><a class="athlete7" href="/?athlete=7">Drew Windle</a></li>
         	<li><a class="athlete2" href="">Garrett Heath</a></li>
         	<li><a class="athlete3" href="">Katie Mackey</a></li>
         	<li><a class="athlete4" href="">Natalja Piliusina</a></li>
         	<li><a class="athlete5" href="">Nick Symmonds</a></li>
         	<li><a class="athlete6" href="">Jess Ton</a></li>
-        	<li><a class="athlete7" href="">Drew Windle</a></li>
         	<li><a class="athlete8" href="">Brannon Kidder</a></li>
         	<li><a class="athlete9" href="">Claudia Saunders</a></li>
         	<li><a class="athlete10" href="">Baylee Mires</a></li>
