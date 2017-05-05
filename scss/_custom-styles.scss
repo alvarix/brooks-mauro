@@ -24,28 +24,52 @@ $font1: 'Montserrat', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 		background:#4D4D4D;
 		border:0;
 	}
+
+	.ui-datepicker-title {
+	}
+
+	.ui-datepicker-prev:hover,
+	.ui-datepicker-next:hover {
 	
+	}
+	
+	.ui-datepicker-other-month {
+		// Cells containing days that occur in a month other than the currently selected month.
+	}
+	
+	.ui-datepicker-current-day {}
+
+	.ui-datepicker-today {}
+
 
 } //#datepicker
 
 .date-title {
-	background:yellow;
+	>.row {
+		background:yellow;
+	}
 
 	h2 {
 		color:$black;
 		text-align: center;
 		font: 600 41px $font2;
+		margin-bottom: 0;
 	}
 
 	.cal {
 		opacity: .75;
+		cursor:pointer;
 
 		&:hover {
 			opacity: 1;
 		}
 	}
-
-}
+	
+	.date-nav  {
+		 margin-top:15px;
+	}
+	
+} // .date-title
 
 
 
