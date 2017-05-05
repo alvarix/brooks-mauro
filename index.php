@@ -47,18 +47,18 @@
       <div class="off-canvas-absolute  off-canvas-wrapper-inner position-left reveal-for-large" id="offCanvasLeftSPlit1" data-off-canvas>
 			<h5 class="athlete-toggle">ATHLETES</h5>
         <ul class="athletes no-bullet">
-        	<li <?php if ($_GET['athlete'] != 7 ) { ?>class='current' <?php } ?>><a class="athlete1" href="/?athlete=1">Hannah Fields</a></li>
-        	<li <?php if ($_GET['athlete'] == 7 ) { ?>class='current' <?php } ?>><a class="athlete7" href="/?athlete=7">Drew Windle</a></li>
-        	<li><a class="athlete2" href="">Garrett Heath</a></li>
-        	<li><a class="athlete3" href="">Katie Mackey</a></li>
-        	<li><a class="athlete4" href="">Natalja Piliusina</a></li>
-        	<li><a class="athlete5" href="">Nick Symmonds</a></li>
-        	<li><a class="athlete6" href="">Jess Ton</a></li>
-        	<li><a class="athlete8" href="">Brannon Kidder</a></li>
-        	<li><a class="athlete9" href="">Claudia Saunders</a></li>
-        	<li><a class="athlete10" href="">Baylee Mires</a></li>
-        	<li><a class="athlete11" href="">Izaic Yorks</a></li>
-        	<li><a class="athlete12" href="">Shaquille Walker</a></li>
+        	<li <?php if ($_GET['athlete'] != 7 ) { ?>class='current' <?php } ?>><a class="athlete" href="/?athlete=1">Hannah Fields</a></li>
+        	<li <?php if ($_GET['athlete'] == 7 ) { ?>class='current' <?php } ?>><a class="athlete" href="/?athlete=7">Drew Windle</a></li>
+        	<li><a class="athlete2" href="javascript:void(0);">Garrett Heath</a></li>
+        	<li><a class="athlete3" href="javascript:void(0);">Katie Mackey</a></li>
+        	<li><a class="athlete4" href="javascript:void(0);">Natalja Piliusina</a></li>
+        	<li><a class="athlete5" href="javascript:void(0);">Nick Symmonds</a></li>
+        	<li><a class="athlete6" href="javascript:void(0);">Jess Ton</a></li>
+        	<li><a class="athlete8" href="javascript:void(0);">Brannon Kidder</a></li>
+        	<li><a class="athlete9" href="javascript:void(0);">Claudia Saunders</a></li>
+        	<li><a class="athlete10" href="javascript:void(0);">Baylee Mires</a></li>
+        	<li><a class="athlete11" href="javascript:void(0);">Izaic Yorks</a></li>
+        	<li><a class="athlete12" href="javascript:void(0);">Shaquille Walker</a></li>
         </ul>
       </div>
 		

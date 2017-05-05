@@ -118,12 +118,10 @@ ul.athletes {
 	
 	a {
 		color:#808080;
-
-		&:hover {
-			color: yellow;
-		}
-
 	}
+	
+	a.athlete:hover { color: yellow }
+
 } //ul.athletes 
 
 .top-bar,
