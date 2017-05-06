@@ -54,7 +54,7 @@ var events = [
             i++;
         }
         if (event) {
-				window.location.replace('index.php?var=' + event.Title);
+				window.location.replace(window.location.href + '&var=' + event.Title);
         }
     }
 	 });

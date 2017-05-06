@@ -25,7 +25,7 @@
 						<span>
 						</span>
 				  </a>
-				 <h2>Coach Dashboard 1.0</h2>
+				 <h2><a href="index.php?athlete=1&race=1">Coach Dashboard 1.0</a></h2>
 				 <img src="images/logos-2x.png" width='243' alt="Logos">
 					
 
@@ -47,8 +47,8 @@
       <div class="off-canvas-absolute  off-canvas-wrapper-inner position-left reveal-for-large" id="offCanvasLeftSPlit1" data-off-canvas>
 			<h5 class="athlete-toggle">ATHLETES</h5>
         <ul class="athletes no-bullet">
-        	<li <?php if ($_GET['athlete'] != 7 ) { ?>class='current' <?php } ?>><a class="athlete" href="/?athlete=1">Hannah Fields</a></li>
-        	<li <?php if ($_GET['athlete'] == 7 ) { ?>class='current' <?php } ?>><a class="athlete" href="/?athlete=7">Drew Windle</a></li>
+        	<li <?php if ($_GET['athlete'] != 7 ) { ?>class='current' <?php } ?>><a class="athlete" href="/?athlete=1&race=1">Hannah Fields</a></li>
+        	<li <?php if ($_GET['athlete'] == 7 ) { ?>class='current' <?php } ?>><a class="athlete" href="/?athlete=7&race=1">Drew Windle</a></li>
         	<li><a class="athlete2" href="javascript:void(0);">Garrett Heath</a></li>
         	<li><a class="athlete3" href="javascript:void(0);">Katie Mackey</a></li>
         	<li><a class="athlete4" href="javascript:void(0);">Natalja Piliusina</a></li>
