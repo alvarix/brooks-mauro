@@ -30,5 +30,15 @@ Hannah Fields <span>Last Race, April 9, 2017</span></h1>
 	</div><!-- /.large-12 -->
 </div><!-- /.row -->
 
+<div class="row mt20">
+	<div class="large-12 columns">
+		<h3 class='graph-title'>POWER DISTRIBUTION</h3>
+		<iframe src="race1.html" frameborder="0"></iframe>
+
+		<h3 class='graph-title'>WORKOUT SUMMARY</h3>
+		<iframe src="race2.html" frameborder="0"></iframe>
+
+	</div><!-- /.large-12 columns -->
+</div><!-- /.row -->
 
 
