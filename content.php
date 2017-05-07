@@ -33,10 +33,10 @@ Hannah Fields <span>Last Race, April 9, 2017</span></h1>
 <div class="row mt20">
 	<div class="large-12 columns">
 		<h3 class='graph-title'>POWER DISTRIBUTION</h3>
-		<iframe src="race1.html" frameborder="0"></iframe>
+		<iframe src="charts/drew-windel-effort-3-18-2017.html" frameborder="0"></iframe>
 
 		<h3 class='graph-title'>WORKOUT SUMMARY</h3>
-		<iframe src="race2.html" frameborder="0"></iframe>
+		<iframe src="charts/drew-windel-wattage-3-18-2017.html" frameborder="0"></iframe>
 
 	</div><!-- /.large-12 columns -->
 </div><!-- /.row -->
