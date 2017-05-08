@@ -1,4 +1,4 @@
-function athleteHeader(containerId, athleteList, selected, onAthleteSelected) {
+function athleteHeader(containerId, athleteList, selected) {
 
   var container = $(containerId);
 

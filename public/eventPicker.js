@@ -8,6 +8,10 @@ function eventPicker(containerId, athleteList, selected) {
   })[0];
 
 
+  function click(){
+    console.log('click');
+  }
+
   // Return the container
   var renderContainer = $(`
     <div class="row">
@@ -22,7 +26,7 @@ function eventPicker(containerId, athleteList, selected) {
 			      <h2>April 12, 2017 <img class='cal' src="images/cal-2x.png" alt="" width='25'></h2>
 		      </div>
 		      <div class="columns large-2 date-nav text-right">
-            <a class="next" href=""><img src="images/arrow-next-2x.png" width='16' alt=""></a>
+            <a class="next" href="" onClick='click()'><img src="images/arrow-next-2x.png" width='16' alt=""></a>
           </div>
 	      </div>
 	    </div><!-- /.large-12 -->
@@ -31,14 +35,14 @@ function eventPicker(containerId, athleteList, selected) {
 
   container.html(renderContainer);
 
-  //console.log('events', selectedAthete.events);
-
-  // Init the datePicker
-  //var events = selectedAthete.events;
-
-
-  //console.log('datepicker', $('#datepicker'));
-
-
 }
 
+/*
+$(document).on('click', '.ui-datepicker-next', function () {
+  console.log('next');  
+})
+
+$(document).on('click', '.ui-datepicker-prev', function () {
+  console.log('prev');  
+})
+*/

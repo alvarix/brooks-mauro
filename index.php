@@ -66,18 +66,18 @@
 				<div class="row expanded">
 					<div class="columns large-12">
 						<div id='athlete-header'></div>
-
+						
 						<div class="row">
 	    				<div class="columns large-12 show-for-medium">
-		    				<div id="datepicker">DatePicker</div>
+		    					<div id="datepicker"></div>
 	    				</div><!-- /.large-12 -->
-    				</div><!-- /.row -->
+    				</div><!-- /.row -->		
 
 						<div id='event-picker'></div>
 
 						<div id='chart-view'></div>
 
-						<!--<?php	include('content.php') ?>-->
+						<!--<php	include('content.php') ?>-->
 
 					</div><!-- /.columns large-12 -->
 				</div><!-- /.row -->
@@ -97,10 +97,11 @@
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
 		<!-- <script src="https://code.jquery.com/ui/2.12.1/jquery-ui.js"></script> -->
 		<script src="js/jquery-ui.js"></script>
-    <script src="js/app.js"></script>
+    <!--<script src="js/app.js"></script>-->
 
 		<script src='public/athletePicker.js'></script>
 		<script src='public/athleteHeader.js'></script>
+		<script src='public/datePicker.js'></script>
 		<script src='public/eventPicker.js'></script>
 		<script src='public/chartView.js'></script>
     <script src='public/app.js' defer></script>

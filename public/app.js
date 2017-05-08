@@ -4,16 +4,16 @@ var state = {
   athleteList: [
     {
       Athlete: 'Hannah Fields', img: 'profile-fields-2x.png', events: [
-        { Athlete: 'Hannah Fields', Title: 'Race1', Date: new Date('04/11/2017') },
-        { Athlete: 'Hannah Fields', Title: 'Race2', Date: new Date('04/22/2017') },
-        { Athlete: 'Hannah Fields', Title: 'Race3', Date: new Date('06/13/2017') }
+        { Athlete: 'Hannah Fields', Title: 'Race1', Html:'race1.html', Date: new Date('04/11/2017') },
+        { Athlete: 'Hannah Fields', Title: 'Race2', Html:'race2.html', Date: new Date('04/22/2017') },
+        { Athlete: 'Hannah Fields', Title: 'Race3', Html:'race1.html', Date: new Date('06/13/2017') }
       ]
     },
     {
       Athlete: 'Drew Windle', img: 'profile-windell-2x.png', events: [
-        { Athlete: 'Drew Windell', Title: 'Race1', Date: new Date('04/13/2017') },
-        { Athlete: 'Drew Windell', Title: 'Race2', Date: new Date('04/25/2017') },
-        { Athlete: 'Drew Windell', Title: 'Race3', Date: new Date('06/01/2017') }
+        { Athlete: 'Drew Windell', Title: 'D Race1',  Html:'race1.html', Date: new Date('04/13/2017') },
+        { Athlete: 'Drew Windell', Title: 'D Race2',  Html:'race2.html', Date: new Date('04/25/2017') },
+        { Athlete: 'Drew Windell', Title: 'D Race3',  Html:'race1.html', Date: new Date('06/01/2017') }
       ]
     },
     { Athlete: 'Garrett Heath', img: null, events: [] },
@@ -32,52 +32,8 @@ var state = {
 
 function onSelectAthlete(name) {
   state.selected = name;
-
-  //find the athlete by name
-  /*var selectedAthete = state.athleteList.filter(function (item) {
-    return item.Athlete === state.selected;
-  })[0];
-
-  if(selectedAthete){
-    onAthleteSelected(selectedAthete.events);
-  }*/
-
   render();
 }
-
-
-function onAthleteSelected(events) {
-  $('#datepicker').datepicker({
-    defaultDate: $.datepicker.parseDate('d m y", "13 4 17'),
-    numberOfMonths: 3,
-    beforeShowDay: function (date) {
-      var result = [true, '', null];
-      var matching = $.grep(events, function (event) {
-        return event.Date.valueOf() === date.valueOf();
-      });
-      if (matching.length) {
-        result = [true, 'highlight', null];
-      }
-      return result;
-    },
-    onSelect: function (dateText) {
-      var date,
-        selectedDate = new Date(dateText),
-        i = 0,
-        event = null;
-
-      while (i < events.length && !event) {
-        date = events[i].Date;
-
-        if (selectedDate.valueOf() === date.valueOf()) {
-          event = events[i];
-        }
-        i++;
-      }
-    }
-  });
-}
-
 
 function animate() {
   // Remove the hidden class for the title;
@@ -89,22 +45,20 @@ function animate() {
   });
 
   //Remove attribute style from date picker
-  $('#datepicker .ui-datepicker-inline').removeAttr('style');
+  //$('#datepicker .ui-datepicker-inline').removeAttr('style');
 
 }
 
 function render() {
   athletePicker('#athletes-list', state.athleteList, state.selected, onSelectAthlete);
-  athleteHeader('#athlete-header', state.athleteList, state.selected, onAthleteSelected);
+  athleteHeader('#athlete-header', state.athleteList, state.selected);
+  datePicker('#datepicker',  state.athleteList,  state.selected);
   eventPicker('#event-picker', state.athleteList, state.selected);
+  //chartView('#chart-view', 'POWER DISTRIBUTION', 'race1.html');
   animate();
 }
 
 
-
-
-
-
-$(function() {
+$(function () {
   render();
 });
