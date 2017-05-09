@@ -1,26 +1,12 @@
-function chartView(containerId, athleteList, selected, selectedDate) {
+function chartView(containerId, selectedAthlete, eventDate) {
   var container = $(containerId);
   var chartDate;
-
-  // Find the Athlete
-  var selectedAthete = athleteList.filter(function (item) {
-    return item.Athlete === selected;
-  })[0];
-
-
-  if (!selectedDate) {
-    // Init the first event if not date has been selected.
-    chartDate = selectedAthete.events[0].Date;
-  } else {
-    chartDate = selectedDate;
-  }
-
 
   var result = '';
 
   // Find the event
-  var selectedEvent = selectAtlhete.events.filter(function (item) {
-    return item.Date === chartDate;
+  var selectedEvent = selectedAthlete.events.filter(function (item) {
+    return item.Date === eventDate;
   })[0];
 
 

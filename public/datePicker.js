@@ -1,4 +1,4 @@
-function datePicker(containerId, athleteList, selected) {
+function datePicker(containerId, athleteList, selected, eventDate, onEventChange) {
 
   var container = $(containerId);
 
@@ -12,12 +12,20 @@ function datePicker(containerId, athleteList, selected) {
   var events = selectedAthete.events;
   var firstEvent = selectedAthete.events[0].Date;
 
+function convertDate(inputFormat) {
+  function pad(s) { return (s < 10) ? '0' + s : s; }
+  var d = new Date(inputFormat);
+  return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join(' ');
+}
+
+
+  console.log('datePicker eventDate', convertDate(eventDate));
+
   container.html();
 
   d = document.createElement('div');
-
   $(d).datepicker({
-    defaultDate: $.datepicker.parseDate('d m y', '13 4 17'),
+    defaultDate: $.datepicker.parseDate('dd m yy', convertDate(eventDate)),
     numberOfMonths: 3,
     beforeShowDay: function (date) {
       var result = [false, '', null];
@@ -38,7 +46,7 @@ function datePicker(containerId, athleteList, selected) {
 
         if (selectedDate.valueOf() === date.valueOf()) {
           event = events[i];
-          chartView('#chart-view', athleteList, selected, date);
+          onEventChange(date);
         }
         i++;
       }

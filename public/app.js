@@ -48,19 +48,33 @@ var state = {
     { Athlete: 'Izaic Yorks', img: null, events: [] },
     { Athlete: 'Shaquille Walker', img: null, events: [] }
   ],
-  selected: 'Hannah Fields',
-  eventDate: null;
+  selected: '',
+  eventDate: null,
+  selectedAthlete: {}
 };
 
 function onSelectAthlete(name) {
   state.selected = name;
-  state.eventDate = null;
+
+  // Find the Athlete Object
+  var selectedAthete = state.athleteList.filter(function (item) {
+    return item.Athlete === state.selected;
+  })[0];
+
+  // Set the seleted athlete
+  state.selectedAthlete = selectedAthete;
+
+  // Set the selected state.
+  state.eventDate = selectedAthete.events[0].Date;
+
   render();
 }
 
-function onSelectedEvent(date){
+function onEventChange(date){
   state.eventDate = date;
+  renderChart();
 }
+
 
 function animate() {
   // Remove the hidden class for the title;
@@ -79,13 +93,18 @@ function animate() {
 function render() {
   athletePicker('#athletes-list', state.athleteList, state.selected, onSelectAthlete);
   athleteHeader('#athlete-header', state.athleteList, state.selected);
-  datePicker('#datepicker', state.athleteList, state.selected);
-  eventPicker('#event-picker', state.athleteList, state.selected);
-  if()
+  datePicker('#datepicker', state.athleteList, state.selected, state.eventDate, onEventChange);
+  eventPicker('#event-picker', state.athleteList, state.selected, state.eventDate);
+  chartView('#chart-view', state.selectedAthlete, state.eventDate);
   animate();
+}
+
+function renderChart() {
+  chartView('#chart-view', state.selectedAthlete, state.eventDate);
 }
 
 
 $(function () {
+  onSelectAthlete('Hannah Fields');
   render();
 });
