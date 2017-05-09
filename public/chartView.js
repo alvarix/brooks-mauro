@@ -1,16 +1,28 @@
-function chartView(containerId, chartName, chartURL) {
+function chartView(containerId, selectedAthlete, eventDate) {
   var container = $(containerId);
+  var chartDate;
 
-  console.log('chartView', chartURL);
+  var result = '';
 
-  var result = `
+  // Find the event
+  var selectedEvent = selectedAthlete.events.filter(function (item) {
+    return item.Date === eventDate;
+  })[0];
+
+
+  console.log('chartView', selectedEvent);
+
+
+  selectedEvent.charts.forEach(function (event) {
+    result += `
     <div class="row mt20">
       <div class="large-12 columns">
-        <h3 class='graph-title'>${chartName}</h3>
+        <h3 class='graph-title'>${event.Title}</h3>
         <div id='chart'></div>
-        <iframe src="public/charts/${chartURL}" frameborder="0"></iframe>
+        <iframe src="charts/${event.Html}" frameborder="0"></iframe>
       </div>
     </div>`;
+  });
 
   // Render the container
   container.html(result);
