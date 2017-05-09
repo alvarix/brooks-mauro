@@ -19,7 +19,7 @@ function athleteHeader(containerId, athleteList, selected) {
   
   // Find the last race if the athlete has events
   var lastRace = (selectedAthete.events.length > 0) ?
-    `Last Race, ${ monthNames[athleteDate.getMonth()]} ${athleteDate.getDate()},  ${athleteDate.getFullYear()}` :
+    `Last Race: ${ monthNames[athleteDate.getMonth()]} ${athleteDate.getDate()},  ${athleteDate.getFullYear()}` :
     '';
 
   // Return the container
