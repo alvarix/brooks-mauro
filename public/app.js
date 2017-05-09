@@ -108,15 +108,6 @@ function onBack() {
 function animate() {
   // Remove the hidden class for the title;
   $('.hidden').fadeIn(1000).removeClass('hidden');
-
-  // Activate Toggle
-  $('.cal').click(function () {
-    $('#datepicker').slideToggle('slow');
-  });
-
-  //Remove attribute style from date picker
-  //$('#datepicker .ui-datepicker-inline').removeAttr('style');
-
 }
 
 function render() {
