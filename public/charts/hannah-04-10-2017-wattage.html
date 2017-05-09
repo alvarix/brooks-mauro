@@ -1,0 +1,76 @@
+<head>
+	</head>
+	<body>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="height: 100%"></div>
+
+<script>
+
+
+Highcharts.chart('container', {
+
+	legend: {
+        enabled: false
+    },
+
+    chart: {
+		backgroundColor: '#1A66A0',
+        polar: true,
+        type: 'line',
+		margin: 40
+    },
+
+    title: {
+        text: ''
+    },
+
+    pane: {
+        size: ''
+    },
+
+    xAxis: {
+        categories: ['5 sec', '15 sec', '30 sec', '1 min',
+                '2 min', '5 min', '10 min'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0,
+		labels: {
+            style: {
+                color: '#fff'
+					}
+				}
+			},
+
+    yAxis: {
+		labels: {
+			style: {
+                color: '#fff'
+					}
+				},
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    series: [{
+        name: 'Watts',
+        data: [389.39,342.92,300.32,280.73,266.94,253.67,249.91],
+		color: '#FFFF00',
+        pointPlacement: 'on',
+		lineWidth: 3,
+    }]
+
+});
+
+</script>
+
+
+</body>
