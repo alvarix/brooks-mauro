@@ -12,9 +12,6 @@ function datePicker(containerId, athleteList, selected) {
   var events = selectedAthete.events;
   var firstEvent = selectedAthete.events[0].Date;
 
-
-  console.log('first->', firstEvent);
-
   container.html();
 
   d = document.createElement('div');
@@ -41,7 +38,7 @@ function datePicker(containerId, athleteList, selected) {
 
         if (selectedDate.valueOf() === date.valueOf()) {
           event = events[i];
-          chartView('#chart-view', event.Title, event.Html);
+          chartView('#chart-view', athleteList, selected, date);
         }
         i++;
       }

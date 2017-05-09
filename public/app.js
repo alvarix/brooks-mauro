@@ -4,16 +4,37 @@ var state = {
   athleteList: [
     {
       Athlete: 'Hannah Fields', img: 'profile-fields-2x.png', events: [
-        { Athlete: 'Hannah Fields', Title: 'Race1', Html:'race1.html', Date: new Date('04/11/2017') },
-        { Athlete: 'Hannah Fields', Title: 'Race2', Html:'race2.html', Date: new Date('04/22/2017') },
-        { Athlete: 'Hannah Fields', Title: 'Race3', Html:'race1.html', Date: new Date('06/13/2017') }
+        {
+          Athlete: 'Hannah Fields',
+          charts: [
+            { Title: 'Effort', Html: 'hannah-fields-effort-3-27-2017.html' },
+            { Title: 'Watt Age', Html: 'hannah-fields-wattage-3-27-2017.html' },
+          ], Date: new Date('03/27/2017')
+        },
+        {
+          Athlete: 'Hannah Fields', charts: [
+            { Title: 'Effort', Html: 'hannah-fields-effort-4-10-2017.html' },
+            { Title: 'Watt Age', Html: 'hannah-fields-wattage-4-10-2017.html' },
+          ], Date: new Date('04/10/2017')
+        },
       ]
     },
     {
       Athlete: 'Drew Windle', img: 'profile-windell-2x.png', events: [
-        { Athlete: 'Drew Windell', Title: 'D Race1',  Html:'race1.html', Date: new Date('04/13/2017') },
-        { Athlete: 'Drew Windell', Title: 'D Race2',  Html:'race2.html', Date: new Date('04/25/2017') },
-        { Athlete: 'Drew Windell', Title: 'D Race3',  Html:'race1.html', Date: new Date('06/01/2017') }
+        {
+          Athlete: 'Drew Windell',
+          charts: [
+            { Title: 'Effort', Html: 'drew-windel-effort-3-18-2017' },
+            { Title: 'Watt Age', Html: 'hannah-fields-wattage-4-10-2017.html' },
+          ], Date: new Date('03/18/2017')
+        },
+        {
+          Athlete: 'Drew Windell',
+          charts: [
+            { Title: 'Effort', Html: 'drew-windel-effort-4-2-2017' },
+            { Title: 'Watt Age', Html: 'drew-windel-wattage-4-2-2017l' },
+          ], Date: new Date('04/02/2017')
+        },
       ]
     },
     { Athlete: 'Garrett Heath', img: null, events: [] },
@@ -27,12 +48,18 @@ var state = {
     { Athlete: 'Izaic Yorks', img: null, events: [] },
     { Athlete: 'Shaquille Walker', img: null, events: [] }
   ],
-  selected: 'Hannah Fields'
+  selected: 'Hannah Fields',
+  eventDate: null;
 };
 
 function onSelectAthlete(name) {
   state.selected = name;
+  state.eventDate = null;
   render();
+}
+
+function onSelectedEvent(date){
+  state.eventDate = date;
 }
 
 function animate() {
@@ -52,9 +79,9 @@ function animate() {
 function render() {
   athletePicker('#athletes-list', state.athleteList, state.selected, onSelectAthlete);
   athleteHeader('#athlete-header', state.athleteList, state.selected);
-  datePicker('#datepicker',  state.athleteList,  state.selected);
+  datePicker('#datepicker', state.athleteList, state.selected);
   eventPicker('#event-picker', state.athleteList, state.selected);
-  //chartView('#chart-view', 'POWER DISTRIBUTION', 'race1.html');
+  if()
   animate();
 }
 
