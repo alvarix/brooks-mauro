@@ -7,14 +7,14 @@ var state = {
         {
           Athlete: 'Hannah Fields',
           charts: [
-            { Title: 'Effort', Html: 'hannah-fields-effort-3-27-2017.html' },
-            { Title: 'Watt Age', Html: 'hannah-fields-wattage-3-27-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'hannah-03-27-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'hannah-03-27-2017-wattage.html' },
           ], Date: new Date('03/27/2017')
         },
         {
           Athlete: 'Hannah Fields', charts: [
-            { Title: 'Effort', Html: 'hannah-fields-effort-4-10-2017.html' },
-            { Title: 'Watt Age', Html: 'hannah-fields-wattage-4-10-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'hannah-04-10-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'hannah-04-10-2017-wattage.html' },
           ], Date: new Date('04/10/2017')
         },
       ]
@@ -24,15 +24,15 @@ var state = {
         {
           Athlete: 'Drew Windell',
           charts: [
-            { Title: 'Effort', Html: 'drew-windel-effort-3-18-2017' },
-            { Title: 'Watt Age', Html: 'hannah-fields-wattage-4-10-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'drew-03-18-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'drew-03-18-2017-wattage.html' },
           ], Date: new Date('03/18/2017')
         },
         {
           Athlete: 'Drew Windell',
           charts: [
-            { Title: 'Effort', Html: 'drew-windel-effort-4-2-2017' },
-            { Title: 'Watt Age', Html: 'drew-windel-wattage-4-2-2017l' },
+            { Title: 'Efficiency Analysis', Html: 'drew-04-02-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'drew-04-02-2017-wattage.html' },
           ], Date: new Date('04/02/2017')
         },
       ]
