@@ -1,20 +1,20 @@
 $(document).foundation();
 
 var state = {
-  athleteList: [
+ athleteList: [
     {
       Athlete: 'Hannah Fields', img: 'profile-fields-2x.png', events: [
         {
           Athlete: 'Hannah Fields',
           charts: [
-            { Title: 'Efficiency Analysis', Html: 'hannah-fields-effort-3-27-2017.html' },
-            { Title: 'Wattage', Html: 'hannah-fields-wattage-3-27-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'hannah-03-27-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'hannah-03-27-2017-wattage.html' },
           ], Date: new Date('03/27/2017')
         },
         {
           Athlete: 'Hannah Fields', charts: [
-            { Title: 'Efficiency Analysis', Html: 'hannah-fields-effort-4-10-2017.html' },
-            { Title: 'Wattage', Html: 'hannah-fields-wattage-4-10-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'hannah-04-10-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'hannah-04-10-2017-wattage.html' },
           ], Date: new Date('04/10/2017')
         },
       ]
@@ -24,15 +24,15 @@ var state = {
         {
           Athlete: 'Drew Windell',
           charts: [
-            { Title: 'Efficiency Analysis', Html: 'drew-windel-effort-3-18-2017.html' },
-            { Title: 'Wattage', Html: 'drew-windel-wattage-3-18-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'drew-03-18-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'drew-03-18-2017-wattage.html' },
           ], Date: new Date('03/18/2017')
         },
         {
           Athlete: 'Drew Windell',
           charts: [
-            { Title: 'Efficiency Analysis', Html: 'drew-windel-effort-4-02-2017.html' },
-            { Title: 'Wattage', Html: 'drew-windel-wattage-4-02-2017.html' },
+            { Title: 'Efficiency Analysis', Html: 'drew-04-02-2017-efficency-analysis.html' },
+            { Title: 'Wattage', Html: 'drew-04-02-2017-wattage.html' },
           ], Date: new Date('04/02/2017')
         },
       ]
