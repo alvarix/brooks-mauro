@@ -6,8 +6,8 @@
 
 /* Layout helpers
 ----------------------------------*/
-#datepicker .current-day {
-	color:yellow;
+.ui-datepicker-today span {
+    color: yellow !important;
 }
 
 
