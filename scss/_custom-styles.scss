@@ -26,56 +26,6 @@ iframe {
 	display:none;
 }
 
-#date-picker {
-
-	.ui-state-default:hover {
-		background: transparent;
-		cursor:default;
-		color: #B3B3B3;
-	}
-	
-	table.ui-datepicker-calendar tbody td.highlight > a {
-		 background: #333333;
-		 cursor:pointer;
-	}
-
-	.ui-datepicker-current-day a.ui-state-active,
-	 table.ui-datepicker-calendar tbody td.highlight > a:hover {
-		background:yellow !important;
-		color: $black;
-		border:1px solid #636363;
-	 }
-
-	.ui-datepicker-today	a.ui-state-highlight {
-		background: transparent;
-		color: yellow;
-	}
-
-	.ui-datepicker {
-		width:100%;
-		background:#4D4D4D;
-		border:0;
-	}
-
-	.ui-datepicker-title {
-	}
-
-	.ui-datepicker-prev:hover,
-	.ui-datepicker-next:hover {
-	
-	}
-	
-	.ui-datepicker-other-month {
-		// Cells containing days that occur in a month other than the currently selected month.
-	}
-	
-	.ui-datepicker-current-day {}
-
-	.ui-datepicker-today {}
-
-
-} //#datepicker
-
 .date-title {
 	>.row {
 		background:yellow;
@@ -85,12 +35,14 @@ iframe {
 		color:$black;
 		text-align: center;
 		font: 600 41px $font2;
-		margin-bottom: 0;
+		margin:5px 0;
 	}
 
 	.cal {
-		opacity: .75;
+		opacity: .8;
 		cursor:pointer;
+		margin: -5px 0 0 5px;
+
 
 		&:hover {
 			opacity: 1;
@@ -116,25 +68,21 @@ iframe {
 
 
 ul.athletes {
-	li {
-		padding: 10px; 
+   li {
+      padding: 10px;
+      color:#808080;
 
-		&.current {
-			background:#231F20;
-	
-			a {
-				color: yellow;
-			}
-		}
-	}
-	
-	a {
-		color:#808080;
-	}
-	
-	a.athlete:hover { color: yellow }
+      &.current {
+         background:#231F20;
+         color: yellow;
+      }
 
-} //ul.athletes 
+      &.active:hover {
+         color: yellow;
+         cursor: pointer;
+      }
+   }
+} //ul.athletes
 
 .top-bar,
 .top-bar a {
