@@ -3,17 +3,26 @@ function athletePicker(containerId, athleteList, selected, onSelectAthlete) {
 
   var lis = athleteList.map(function (item) {
     if (item.Athlete === selected) {
-      return `<li class='athlete current'>${item.Athlete}</li>`;
+      return `<li class='athlete active current'>${item.Athlete}</li>`;
     } else {
-      return `<li class='athlete'>${item.Athlete}</li>`;
+      if (item.events.length > 0) {
+        return `<li class='athlete active'>${item.Athlete}</li>`;
+      } else {
+        return `<li class='athlete inactive'>${item.Athlete}</li>`;
+      }
     }
   }).join('');
 
   var ul = $(`<ul class='athletes no-bullet'>${lis}</ul>`);
 
   ul.on('click', 'li', function () {
-    var name = $(this).text();
-    onSelectAthlete(name);
+    // if active click on it, otherwise ignore
+
+    console.log('class->',$(this).attr('class'));
+    if ($(this).attr('class') === 'athlete active') {
+      onSelectAthlete($(this).text());
+    }
+
   });
 
   container.html(ul);
