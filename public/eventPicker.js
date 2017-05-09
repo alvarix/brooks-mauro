@@ -2,7 +2,9 @@ function eventPicker(containerId, athleteList, selected, eventDate, onNext, onBa
 
   var container = $(containerId);
 
-
+  var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+  ];
 
   var renderContainer = $(`
     <div class="row">
@@ -10,15 +12,15 @@ function eventPicker(containerId, athleteList, selected, eventDate, onNext, onBa
 	      <div class="row">
 		      <div class="columns small-2 date-nav">
             <span>
-              <a class="prev" href="#" onClick="onBack()"><img src="images/arrow-prev-2x.png" width='16' alt=""></a>
+              <div class="prev"onClick="onBack()"><img src="images/arrow-prev-2x.png" width='16' alt=""></div>
             </span>
           </div>
 		      <div class="columns small-8">
-			      <h2>${eventDate.toDateString('d m, yy').slice(4)} <img class='cal' src="images/cal-2x.png" alt="" width='25'></h2>
+			      <h2>${ monthNames[eventDate.getMonth()]} ${eventDate.getDate()},  ${eventDate.getFullYear()} <img class='cal' src="images/cal-2x.png" alt="" width='25'></h2>
 		      </div>
 
 		      <div class="columns small-2 date-nav text-right">
-            <a class="next" href="#" onClick='onNext()'><img src="images/arrow-next-2x.png" width='16' alt=""></a>
+            <div class="next" onClick='onNext()'><img src="images/arrow-next-2x.png" width='16' alt=""></div>
           </div>
 	      </div>
 	    </div><!-- /.large-12 -->
@@ -26,5 +28,10 @@ function eventPicker(containerId, athleteList, selected, eventDate, onNext, onBa
     `);
 
   container.html(renderContainer);
+
+  //add the event toogle
+  $('.cal').click(function () {
+    $('#datepicker').slideToggle('slow');
+  });
 
 }
