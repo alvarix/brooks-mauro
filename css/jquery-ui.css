@@ -6,6 +6,11 @@
 
 /* Layout helpers
 ----------------------------------*/
+#datepicker .current-day {
+	color:yellow;
+}
+
+
 #datepicker .ui-helper-hidden {
 	display: none;
 }
