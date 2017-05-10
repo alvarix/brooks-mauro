@@ -17,8 +17,11 @@ function datePicker(containerId, athleteList, selected, eventDate, onEventChange
   var today = new Date();
   var d = document.createElement('div');
 
+  //setDate: $.datepicker.parseDate('dd m yy', convertDate(eventDate))
+  //defaultDate: $.datepicker.parseDate('dd m yy', convertDate(new Date('03/01/2017'))),
+
   $(d).datepicker({
-    defaultDate: $.datepicker.parseDate('dd m yy', convertDate(eventDate)),
+    defaultDate: $.datepicker.parseDate('dd m yy', convertDate(new Date('03/01/2017'))),
     numberOfMonths: 3,
     beforeShowDay: function (date) {
       var result = [false, '', null];
