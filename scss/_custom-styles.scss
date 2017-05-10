@@ -55,6 +55,16 @@ iframe {
 	
 	.date-nav  {
 		 margin-top:15px;
+
+		 .prev, .next {
+
+		 opacity: .9;
+		 cursor: pointer;
+		 	
+			&:hover: {
+				opacity:1;
+			}
+		}
 	}
 	
 } // .date-title
