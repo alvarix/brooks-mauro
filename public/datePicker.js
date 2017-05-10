@@ -32,7 +32,6 @@ function datePicker(containerId, athleteList, selected, eventDate, onEventChange
       });
       if (matching.length) {
         if (date.valueOf() === eventDate.valueOf()) {
-          console.log('match');
           result = [true, 'highlight', null];
         } else {
           result = [true, '', null];
