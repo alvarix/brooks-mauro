@@ -28,7 +28,11 @@ function datePicker(containerId, athleteList, selected, eventDate, onEventChange
         return event.Date.valueOf() === date.valueOf();
       });
       if (matching.length) {
-        result = [true, 'highlight', null];
+        if (date === eventDate) {
+          result = [true, 'highlight', null];
+        } else {
+          result = [true, '', null];
+        }
       }
       // find the today date and add style current-day
       if (today.toDateString('d m, yy') === date.toDateString('d m, yy')) {
@@ -58,9 +62,9 @@ function datePicker(containerId, athleteList, selected, eventDate, onEventChange
 }
 
 function convertDate(inputFormat) {
-    function pad(s) { return (s < 10) ? '0' + s : s; }
-    var d = new Date(inputFormat);
-    return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join(' ');
-  }
+  function pad(s) { return (s < 10) ? '0' + s : s; }
+  var d = new Date(inputFormat);
+  return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join(' ');
+}
 
 
