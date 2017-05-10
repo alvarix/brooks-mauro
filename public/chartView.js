@@ -22,11 +22,11 @@ function chartView(containerId, selectedAthlete, eventDate) {
 
 
   //add the event toogle
-  $(container).hide();
+  // $(container).hide();
 
   // Render the container
   container.html(result);
 
-  $(container).fadeIn('slow');
+  //$(container).fadeIn('slow');
 }
 
